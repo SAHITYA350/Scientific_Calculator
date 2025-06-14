@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    transition: background 0.6s cubic-bezier(.4,0,.2,1);
+    background-color: #011118;
+}
+
+body {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 330px;
+    height: 550px;
+    padding: 10px;
+    background: linear-gradient(135deg, #232526 0%, #2c5364 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(17,17,26,0.12), 0 8px 32px rgba(17,17,26,0.12);
+    transition: background 0.6s cubic-bezier(.4,0,.2,1), color 0.6s cubic-bezier(.4,0,.2,1);
+    color: #fff;
+}
+
+.input-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.input-box::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari */
+}
+
+.input-box .user-input {
+    all: unset;
+    display: block;
+    min-width: 100%;
+    color: #b0bec5;
+    font-size: 24px;
+    white-space: nowrap;
+    text-align: right;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.user-input::-webkit-scrollbar {
+    display: none;
+}
+
+.input-box .result {
+    color: #fff;
+    font-size: 40px;
+    text-align: right;
+    margin-top: 10px;
+    word-wrap: break-word;
+}
+
+
+.input-box .toggle-btn {
+    position: absolute;
+    top: 9px;
+    right:280px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.input-box .toggle-btn i {
+    position: absolute;
+    cursor: pointer;
+    color: #b0bec5;
+    transition: color 0.4s;
+}
+
+.input-box .toggle-btn #dark-mode-btn {
+    display: none;
+}
+
+.btns-box {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0 0 20px;
+}
+
+.btns-box .btn,
+.btns-box #ac,
+.btns-box #del-btn {
+    all: unset;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 21px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #434343 0%, #262626 100%);
+    box-shadow: 0 2px 8px rgba(44,83,100,0.08);
+    border: none;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.btns-box .btn:hover,
+.btns-box #ac:hover,
+.btns-box #del-btn:hover {
+    background: linear-gradient(135deg, darkblue 0%, cyan 100%);
+    color: white;
+    box-shadow: 0 4px 16px #fcba0440;
+}
+
+.btns-box #ac,
+.btns-box #del-btn {
+    background: linear-gradient(135deg, #232526 0%, #434343 100%);
+    color:white; 
+}
+
+.btns-box .with-big-btn {
+    color: cyan;
+    background: linear-gradient(135deg, cyan 0%, #434343 100%);
+}
+
+.btns-box .shift {
+    position: relative;
+    left: 72px;
+}
+
+.container .scientific-btns {
+    position: absolute;
+    bottom: 29px;
+    width: 229px;
+    height: 300px;
+    padding: 5px;
+    background: linear-gradient(135deg, cyan 0%, darkblue 100%);
+    border-radius: 7px 0 210px 7px;
+    transition: all .3s cubic-bezier(.6,-0.28,.74,.05);
+    margin-left: 8px;
+    left: -210px;
+    box-shadow: 0 4px 24px rgba(252,186,4,0.12);
+}
+
+.scientific-btns.active {
+    left: 5px;
+}
+
+.container .scientific-btns .scien-btn {
+    all: unset;
+    float: left;
+    width: 45px;
+    height: 35px;
+    margin: 30px 0 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 21px;
+    position: relative;
+    top: -13px;
+    cursor: pointer;
+    background: linear-gradient(135deg, rgb(12, 36, 48) 0%, rgb(51, 8, 70) 100%);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgb(0, 0, 0);
+    transition: background 0.3s, color 0.3s;
+}
+
+.container .scientific-btns .scien-btn:hover {
+    background: linear-gradient(135deg, #232526 0%, #434343 100%);
+    color: cyan;
+}
+
+.container .scientific-btns .back-btn {
+    all: unset;
+    position: absolute;
+    right: -72px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    bottom: 0;
+    border-radius: 7px;
+    width: 55px;
+    height: 56px;
+    background: linear-gradient(135deg, cyan 0%, darkblue 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkblue;
+    cursor: pointer;
+    box-shadow: 0 2px 8px black;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container .scientific-btns .back-btn:hover {
+    background: linear-gradient(135deg, #232526 0%, #434343 100%);
+    color: lightskyblue;
+}
+
+/* LIGHT MODE */
+.container.light {
+    background: linear-gradient(135deg, #fff 0%, #e5e9f2 100%);
+    color: #232526;
+    box-shadow: 0 4px 24px rgba(44,83,100,0.08);
+}
+
+.container.light .input-box .result,
+.container.light .input-box input {
+    color: #232526;
+    text-shadow: none;
+}
+
+.container.light .btns-box .btn,
+.container.light .btns-box #ac,
+.container.light .btns-box #del-btn {
+    color: #232526;
+    background: linear-gradient(135deg, #f4f0f0 0%, #cacbcc 100%);
+    border: none;
+    box-shadow: 0 2px 8px rgba(44,83,100,0.08);
+}
+
+.container.light .btns-box .btn:hover,
+.container.light .btns-box #ac:hover,
+.container.light .btns-box #del-btn:hover {
+     background: #dde1e7;
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+    color: #232526;
+    box-shadow: 0 4px 16px black;
+}
+
+.container.light .btns-box .with-big-btn {
+    color: darkblue;
+    background: linear-gradient(135deg, #aaaaaa 0%, #f1f7ff 100%);
+}
+
+.container.light .scientific-btns {
+    background: linear-gradient(transparent 100%);
+    box-shadow: -1px 2px 10px black;
+}
+
+.container.light .scientific-btns .scien-btn {
+    color: black;
+    font-weight: bolder;
+    background: linear-gradient(135deg, rgb(62, 62, 62) 0%, rgb(255, 255, 255) 100%);
+}
+
+.container.light .scientific-btns .scien-btn:hover {
+    background: linear-gradient(135deg, #232526 0%, #434343 100%);
+    color: cyan;
+}
+
+.container.light .scientific-btns .back-btn {
+    background: linear-gradient(135deg, rgb(163, 163, 163) 0%, white 100%);
+    color: #232526;
+}
+
+.container.light .scientific-btns .back-btn:hover {
+    background: linear-gradient(135deg, #232526 0%, #434343 100%);
+    color: cyan;
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 10px;
+        min-height:93vh;
+        border-radius: 0px;
+    }
+
+    .btn, #ac, #del-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .scientific-btns {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .scientific-btns .scien-btn {
+        width: 45%;
+        margin: 5px 2.5%;
+    }
+
+    .container .input-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .container .input-box .user-input {
+        font-size: 1.5rem;
+        padding: 12px;
+    }
+
+    .container .input-box .result {
+        font-size: 2rem;
+        padding: 12px;
+    }
+}
